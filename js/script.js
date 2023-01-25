@@ -74,7 +74,7 @@ const addToCart = (event) => {
   const text = element.querySelector("h2").innerText;
   const preco = element.querySelector("span").innerText.replace("R$", "");
   if (cartItens.filter((e) => e.src === img).length > 0) {
-    alert("Esse item já foi adicionado");
+    alert("Esse item já foi adicionado.");
   } else {
     cartItens.push({ src: img, title: text, price: preco, quantity: 1 });
   }
@@ -103,14 +103,14 @@ const updateTotal = () => {
 
 const buyEvent = () => {
   if (cartItens.length) {
-    alert("Sua compra foi encaminhada");
+    alert("Sua compra foi encaminhada.");
     while (cartItens.length) {
       cartItens.pop();
     }
     updateCart();
     updateTotal();
   } else {
-    alert("Adicione algum item ao seu carrinho");
+    alert("Adicione algum item ao seu carrinho.");
   }
 };
 
