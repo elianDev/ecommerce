@@ -60,10 +60,8 @@ const addEvents = (btn, input) => {
 };
 
 const removeItem = (event) => {
-  const img = event.target.parentElement.querySelector("img");
-  const src = img.getAttribute("src");
-  const index = event.target.parentElement.parentElement.dataset.index;
-  cartItens.splice(index, 1);
+  const element = event.target;
+  cartItens.splice(element.parentElement.dataset.index, 1);
   updateCart();
   updateTotal();
 };
